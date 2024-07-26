@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Run3D.WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Run3D.WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
