@@ -23,5 +23,22 @@ namespace Run3D.WinUI.Pages
         {
             Frame.Navigate(typeof(CustomersPage));
         }
+
+        private void OnNavigationViewSelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            if (args.SelectedItem is NavigationViewItem selectedItem)
+            {
+                switch (selectedItem.Tag)
+                {
+                    case "HomePage":
+                        ContentFrame.Navigate(typeof(HomePage));
+                        break;
+                    case "CustomersPage":
+                        ContentFrame.Navigate(typeof(CustomersPage));
+                        break;
+                        // Add more cases for other pages
+                }
+            }
+        }
     }
 }

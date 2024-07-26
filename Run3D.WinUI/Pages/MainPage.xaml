@@ -9,10 +9,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button Content="Go to Customers Page"
-                Click="OnNavigateButtonClick"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"/>
-    </Grid>
+    <NavigationView x:Name="MainNavigationView"
+                    PaneDisplayMode="Auto"
+                    IsBackButtonVisible="Collapsed"
+                    SelectionChanged="OnNavigationViewSelectionChanged">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Home" Icon="Home" Tag="HomePage"/>
+            <NavigationViewItem Content="Customers" Icon="Contact" Tag="CustomersPage"/>
+        </NavigationView.MenuItems>
+
+        <Frame x:Name="ContentFrame"/>
+    </NavigationView>
 </Page>

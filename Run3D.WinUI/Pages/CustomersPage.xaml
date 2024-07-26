@@ -10,12 +10,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <Button Content="Back to Main Page"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Margin="10"
-                Click="OnBackToMainPageClick"/>
-        
         <controls:DataGrid x:Name="CustomersDataGrid"
                            AutoGenerateColumns="False"
                            HorizontalAlignment="Stretch"

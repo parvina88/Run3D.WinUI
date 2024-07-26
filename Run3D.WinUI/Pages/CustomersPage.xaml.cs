@@ -32,11 +32,6 @@ namespace Run3D.WinUI.Pages
 
             CustomersDataGrid.ItemsSource = customers;
         }
-
-        private void OnBackToMainPageClick(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
-        }
     }
 
     public class Customer
