@@ -9,10 +9,16 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock Text="Welcome to the Home Page" 
-                   HorizontalAlignment="Center" 
-                   VerticalAlignment="Center" 
-                   FontSize="24"/>
-    </Grid>
+    <NavigationView x:Name="HomeNavigationView"
+                    PaneDisplayMode="Top"
+                    IsBackButtonVisible="Collapsed">
+    <NavigationView.MenuItems>
+            <NavigationViewItem Content="Clinical Exams" Icon="WalkSolid" Tag="ClinicalExamsPage"/>
+            <NavigationViewItem Content="Gait Analysis" Icon="People" Tag="GaitAnalysisPage"/>
+            <NavigationViewItem Content="Recommendation" Icon="Document" Tag="RecommendationPage"/>
+        </NavigationView.MenuItems>
+
+        <Frame x:Name="HomeContentFrame"/>
+    </NavigationView>
+
 </Page>
